@@ -13,6 +13,13 @@ namespace lab_4_v1._0
 {
     public partial class Login_form : Form
     {
+        MainForm mainForm;
+        class Client
+        {
+            public string login_data;
+            public string password_data;
+           
+        }
         public Login_form()
         {
             InitializeComponent();
@@ -51,7 +58,27 @@ namespace lab_4_v1._0
 
         private void login_button_Click(object sender, EventArgs e)
         {
+            string login_data = login_field.Text;
+            string password_data = password_field.Text;
+            mainForm = new MainForm();
+            if (login_field.Text == "") 
+            {
+                MessageBox.Show("Введите логин");
+            }
+            if (password_field.Text == "")
+            {
+                MessageBox.Show("Вы не ввели пароль");
+            }
+            else
+            {
+                mainForm.Show();
+                Hide();
+            }
+            
+            
 
         }
+    
+
     }
 }
