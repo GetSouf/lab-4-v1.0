@@ -105,7 +105,6 @@
             login_field.Name = "login_field";
             login_field.Size = new Size(341, 60);
             login_field.TabIndex = 2;
-            login_field.Text = "OMO";
             // 
             // pictureBox1
             // 
@@ -156,7 +155,7 @@
             label1.Name = "label1";
             label1.Size = new Size(801, 109);
             label1.TabIndex = 0;
-            label1.Text = "Авторизация";
+            label1.Text = "Регистрация";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Login_form
