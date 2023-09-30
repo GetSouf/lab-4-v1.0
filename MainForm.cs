@@ -13,6 +13,9 @@ namespace lab_4_v1._0
     public partial class MainForm : Form
     {
         DataForm dataForm;
+        AviaForm aviaForm;
+        HotelForm hotelForm;
+        EndForm endForm;
         public MainForm()
         {
             InitializeComponent();
@@ -26,14 +29,25 @@ namespace lab_4_v1._0
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            main_form_name.Text = DataBank.name;
-            main_form_surname.Text = DataBank.surname;
-            main_form_age.Text = DataBank.age;
+
         }
 
         private void Avia_button_Click(object sender, EventArgs e)
         {
+            aviaForm = new AviaForm();
+            aviaForm.Show();
+        }
 
+        private void Hotel_Button_Click(object sender, EventArgs e)
+        {
+            hotelForm = new HotelForm();
+            hotelForm.Show();
+        }
+
+        private void Check_button_Click(object sender, EventArgs e)
+        {
+            endForm = new EndForm();
+            endForm.Show();
         }
     }
 }

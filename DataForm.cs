@@ -22,6 +22,26 @@ namespace lab_4_v1._0
             DataBank.name = name_field.Text;
             DataBank.surname = surname_field.Text;
             DataBank.age = age_field.Text;
+            if (name_field.Text == "")
+            {
+                MessageBox.Show("Вы не ввели имя");
+            }
+            if (surname_field.Text == "")
+            {
+                MessageBox.Show("Вы не ввели фамилию");
+            }
+            if (age_field.Text == "")
+            {
+                MessageBox.Show("Вы не ввели возраст");
+            }
+            if (Int32.Parse(age_field.Text) < 18)
+            {
+                MessageBox.Show("Услуги нашей компании доступны только лицам старше 18 лет.");
+            }
+            else
+            {
+                Hide();
+            }
         }
     }
 }

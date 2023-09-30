@@ -61,7 +61,20 @@ namespace lab_4_v1._0
             string login_data = login_field.Text;
             string password_data = password_field.Text;
             mainForm = new MainForm();
-            mainForm.Show();
+            if (login_field.Text == "") 
+            {
+                MessageBox.Show("Введите логин");
+            }
+            if (password_field.Text == "")
+            {
+                MessageBox.Show("Вы не ввели пароль");
+            }
+            else
+            {
+                mainForm.Show();
+                Hide();
+            }
+            
             
 
         }
